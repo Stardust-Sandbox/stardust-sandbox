@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.15)
+
+if(DEFINED STARDUSTSANDBOX_CMAKE_INCLUDED)
+	return()
+endif()
+
+set(STARDUSTSANDBOX_CMAKE_INCLUDED TRUE)
+set(STARDUSTSANDBOX_PROJECT_NAME "StardustSandbox")
+
+project(${STARDUSTSANDBOX_PROJECT_NAME} LANGUAGES CXX)
+
+add_executable(${STARDUSTSANDBOX_PROJECT_NAME}
+	src/main.cpp
+)
+
+target_compile_features(${STARDUSTSANDBOX_PROJECT_NAME} PRIVATE cxx_std_17)
